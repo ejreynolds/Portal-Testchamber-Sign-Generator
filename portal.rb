@@ -4,7 +4,7 @@ require 'prawn/core'
 require 'prawn/layout'
 require 'csv'
 require 'awesome_print'
-
+require 'bundler/setup'
 # Parse the CSV
 residents = CSV.read("./residents.csv")
 

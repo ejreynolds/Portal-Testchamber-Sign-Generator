@@ -1,0 +1,20 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    awesome_print (1.2.0)
+    pdf-core (0.2.5)
+    prawn (1.0.0)
+      pdf-core (~> 0.2.2)
+      ttfunk (~> 1.1.1)
+    prawn-core (0.8.4)
+    prawn-layout (0.8.4)
+    ttfunk (1.1.1)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  awesome_print
+  prawn
+  prawn-core
+  prawn-layout
