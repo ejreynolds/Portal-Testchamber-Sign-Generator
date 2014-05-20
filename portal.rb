@@ -2,18 +2,18 @@ require 'rubygems'
 require 'prawn'
 require 'prawn/core'
 require 'prawn/layout'
-require 'fastercsv'
+require 'csv'
 require 'awesome_print'
 
 # Parse the CSV
-residents = FasterCSV.read("residents.csv")
+residents = CSV.read("./residents.csv")
 
 rooms = Hash.new
 residents.each { |r| rooms[r[0]] = (rooms[r[0]] || []) + [r[1]] }
 rooms = rooms.sort
 
 # Create the PDF object
-pdf = Prawn::Document.generate("output/portal_doordecs.pdf") do 
+pdf = Prawn::Document.generate("./output/portal_doordecs.pdf") do 
   text "Door Decs"
   
   # Iterate over every room.
@@ -25,24 +25,25 @@ pdf = Prawn::Document.generate("output/portal_doordecs.pdf") do
     names = names.sort
     
     # Room Number
-    move_up 70
-    font "Univers LT 49 Light Ultra Condensed.ttf"
+    move_up 20
+    font "./Univers LT 49 Light Ultra Condensed.ttf"
     text room, :size => 375, :align => :left
-    move_up 40
+    move_up 30
     
     # Building
-    font 'UniversLTStd-BoldCn.ttf'
-    text 'Hilltop Apartments - Wheeler', :size => 24
-
+move_down 109
+    font './UniversLTStd-BoldCn.ttf'
+    text "Keaton's Room", :size => 24
+    move_down 10
     # Top Line
-    move_down 40
+    move_down 30
     stroke do
       rectangle [0,y], 500, 1
     end
     
     # Lines
     move_up 20
-    image 'lines.png', :position => :left, :height => 40
+    image './lines.png', :position => :left, :height => 40
     move_down 20
     
     # Resident Names
@@ -51,18 +52,18 @@ pdf = Prawn::Document.generate("output/portal_doordecs.pdf") do
     end
     
     # Middle Line
-    move_down 40
+    move_down 50
     stroke do
       rectangle [0,y], 500, 1
     end
     
     # Icons
     #move_down 50
-    move_up 20
-    image 'icons.png', :position => :left, :height => 100
+    move_up 30
+    image './icons.png', :position => :left, :height => 100
     
     # Aperature Logo
-    move_down 40
-    image 'aperature_labs.png', :position => :left, :height => 30
+    move_down 80
+    image './aperature_labs.png', :position => :left, :height => 30
   end
 end
