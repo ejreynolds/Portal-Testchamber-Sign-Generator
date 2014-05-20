@@ -15,4 +15,3 @@ Unfortunately, I can't release the two font files that you need (Univers LT 49 L
 I do not own the Portal artwork.  That is (I'm sure) copyright and trademarked to Valve.
 
 This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 Unported License.
-
