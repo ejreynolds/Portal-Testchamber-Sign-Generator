@@ -1,5 +1,7 @@
+Portal Test Chamber Sign Generator 1.1
+====================
 Updated for Ruby 1.9!
-==============
+-----------------
 
 In order for this to work properly, you must install prawn, prawn-core, prawn-layout, and awesome_print.
 
