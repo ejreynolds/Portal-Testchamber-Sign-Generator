@@ -4,7 +4,7 @@ In order for this to work properly, you must install prawn, prawn-core, prawn-la
 
 You can easily do this by going into the generator's directory and running:
 
-    ``` sudo gem install bundler ```
+     sudo gem install bundler
     
 then:
 
@@ -12,7 +12,7 @@ then:
 
 After that, run:
 
-    ```ruby portal.rb```
+    ruby portal.rb
     
 and the PDF will be in the output folder.
 
