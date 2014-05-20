@@ -1,0 +1,5 @@
+source 'https://rubygems.org'
+gem 'awesome_print'
+gem 'prawn-core'
+gem 'prawn'
+gem 'prawn-layout'
